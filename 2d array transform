@@ -1,0 +1,16 @@
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] a = { {5, 4, 7}, {1, 8, 3}, {9, 6, 2} };
+
+        a[1][0] = a[0][1];
+        a[2][0] = a[0][2];
+        a[2][1] = a[1][2];
+
+        for (int[] row : a) {
+            for (int val : row)
+                System.out.print(val + " ");
+            System.out.println();
+        }
+    }
+}
