@@ -1,0 +1,24 @@
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] a= {
+                {56, 7, 18, 2},
+                {24, 5, 14, 9},
+                {3, 25, 8, 32},
+                {15, 1, 12, 4}};
+        int count = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (isAbundant(a[i][j])) {
+                    count++;}}}
+        System.out.println("Abundant Numbers Count: " + count);
+        System.out.println(count % 2 == 0 ? "YES" : "NO");
+    }
+    public static boolean isAbundant(int num) {
+        int sum = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;}}
+        return sum > num;
+    }
+}
